@@ -9,7 +9,8 @@ import {
   Image,
 } from 'react-native';
 import styles from './styles';
-import SvgDots from '../../SvgDots';
+import Entypo from 'react-native-vector-icons/Entypo';
+
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -20,11 +21,18 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <TouchableOpacity style={styles.button}>
-          <ImageBackground
-            source={require('../../assets/image/angryimg.png')}
-            style={styles.imageBackground}
-          />
-          <SvgDots style={styles.svgDots} color="#FFFFFF" />
+          <View style={styles.iconOverlay}>
+            <ImageBackground
+              source={require('../../assets/image/angryimg.png')}
+              style={styles.imageBackground}
+            />
+            <Entypo
+              style={styles.icon}
+              name="dots-three-horizontal"
+              size={28}
+              color="white"
+            />
+          </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <ImageBackground source={image} style={styles.imageBackground} />
