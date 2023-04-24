@@ -11,64 +11,35 @@ import {
 import styles from './styles';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-
 import LinearGradient from 'react-native-linear-gradient';
+import colors from '../../app/config/colors';
+import SPACING from '../../app/config/SPACING';
 
 const image = require('../../assets/image/avatar.jpg');
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <TouchableOpacity style={styles.button}>
-          <View style={styles.iconOverlay}>
-            <ImageBackground
-              source={require('../../assets/image/angryimg.png')}
-              style={styles.imageBackground}
-            />
-            <Entypo
-              style={styles.icon}
-              name="dots-three-horizontal"
-              size={28}
-              color="white"
-            />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <ImageBackground source={image} style={styles.imageBackground} />
-        </TouchableOpacity>
-      </View>
-      <View>
-        <TextInput
-          style={styles.input}
-          placeholder="Search"
-          placeholderTextColor={'grey'}
-        />
-      </View>
-
-      <View style={styles.linearGradientContainer}>
+    <SafeAreaView>
+      <View style={styles.containerGradient}>
         <LinearGradient
-          colors={['#000000', '#ffce2b']}
-          style={styles.linearGradient}>
-          <View style={styles.textWrap}>
-            <Text style={[styles.text, styles.textOne]}>20%</Text>
-            <Text style={[styles.text, styles.textTwo]}>New Arrival</Text>
-            <Text style={[styles.text, styles.textThree]}>
-              Get a new car discount, only valid this friday
-            </Text>
-          </View>
-          <View style={styles.imageWrap}>
-            <Image
-              style={styles.image}
-              source={require('../../assets/image/cars/bmw-wlcom.png')}
+          style={styles.circleGradient}
+          colors={[colors.light, colors['dark-gray']]}>
+          <TouchableOpacity style={styles.entypoIcon}>
+            <Entypo
+              name="dots-three-horizontal"
+              size={SPACING * 2.5}
+              color={colors.light}
             />
-          </View>
+          </TouchableOpacity>
+        </LinearGradient>
+        <LinearGradient
+          style={styles.circleGradient}
+          colors={[colors.light, colors['dark-gray']]}>
+          <TouchableOpacity style={styles.entypoIcon}>
+           <Image source={image} style={styles.image} />
+          </TouchableOpacity>
         </LinearGradient>
       </View>
-      <View style={{}}>
-        <Text style={styles.textDeals}>Top Deals</Text>
-      </View>
-      <View></View>
     </SafeAreaView>
   );
 }
