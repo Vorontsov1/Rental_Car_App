@@ -26,8 +26,8 @@ const gradient = [colors['dark'], colors.dark_yellow];
 
 export default function HomeScreen() {
   return (
-    <ScrollView>
-      <SafeAreaView>
+    <SafeAreaView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.containerGradient}>
           <LinearGradient
             style={styles.circleGradient}
@@ -97,19 +97,21 @@ export default function HomeScreen() {
             {cars.map(car => (
               <LinearGradient colors={gradient} style={styles.cars}>
                 <View>
-                  <View style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                  }}>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                    }}>
                     <Entypo
                       name="star"
                       size={SPACING * 1.6}
                       color={colors.red}
                     />
-                    <Text style={{
-                      color: colors.light,
-                      marginLeft: SPACING / 2,
-                    }}>
+                    <Text
+                      style={{
+                        color: colors.light,
+                        marginLeft: SPACING / 2,
+                      }}>
                       {car.rating}
                     </Text>
                   </View>
@@ -119,11 +121,12 @@ export default function HomeScreen() {
                   resizeMode="contain"
                   style={styles.carImage}
                 />
+                <Text>{car.name}</Text>
               </LinearGradient>
             ))}
           </View>
         </View>
-      </SafeAreaView>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
