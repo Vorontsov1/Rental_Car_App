@@ -145,14 +145,13 @@ export default function HomeScreen() {
                     style={{
                       borderRadius: SPACING / 2,
                       overflow: 'hidden',
-                  }}
-                  >
+                    }}>
                     <LinearGradient
                       style={{
                         padding: SPACING / 3,
                         paddingHorizontal: SPACING / 2,
                       }}
-                      colors={gradient}>
+                      colors={[colors['dark'], colors.dark_yellow]}>
                       <Ionicons
                         name="arrow-forward"
                         size={SPACING * 2}
