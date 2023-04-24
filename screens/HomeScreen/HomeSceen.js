@@ -141,8 +141,18 @@ export default function HomeScreen() {
                     }}>
                     $ {car.price}
                   </Text>
-                  <TouchableOpacity>
-                    <LinearGradient colors={gradient}>
+                  <TouchableOpacity
+                    style={{
+                      borderRadius: SPACING / 2,
+                      overflow: 'hidden',
+                  }}
+                  >
+                    <LinearGradient
+                      style={{
+                        padding: SPACING / 3,
+                        paddingHorizontal: SPACING / 2,
+                      }}
+                      colors={gradient}>
                       <Ionicons
                         name="arrow-forward"
                         size={SPACING * 2}
