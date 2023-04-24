@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   cars: {
-    height: 300,
+    height: 220,
     width: width / 2 - SPACING * 3,
     borderRadius: SPACING * 2,
     marginBottom: SPACING * 2,
