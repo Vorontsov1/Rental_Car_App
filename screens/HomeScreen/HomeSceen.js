@@ -121,7 +121,24 @@ export default function HomeScreen() {
                   resizeMode="contain"
                   style={styles.carImage}
                 />
-                <Text>{car.name}</Text>
+                <Text
+                  style={{
+                    fontSize: SPACING * 1.8,
+                    color: colors.light,
+                  }}>
+                  {car.name}
+                </Text>
+                <View style={{
+                  marginVertical: SPACING,
+                }}>
+                  <Text
+                    style={{
+                      color: colors.light,
+                      fontSize: SPACING * 1.5,
+                    }}>
+                    $ {car.price}
+                  </Text>
+                </View>
               </LinearGradient>
             ))}
           </View>
