@@ -97,7 +97,22 @@ export default function HomeScreen() {
             {cars.map(car => (
               <LinearGradient colors={gradient} style={styles.cars}>
                 <View>
-                  <Entypo name="star" size={SPACING * 2.5} color={colors.red} />
+                  <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                  }}>
+                    <Entypo
+                      name="star"
+                      size={SPACING * 1.6}
+                      color={colors.red}
+                    />
+                    <Text style={{
+                      color: colors.light,
+                      marginLeft: SPACING / 2,
+                    }}>
+                      {car.rating}
+                    </Text>
+                  </View>
                 </View>
                 <Image
                   source={car.image}
