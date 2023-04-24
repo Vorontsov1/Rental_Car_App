@@ -12,6 +12,7 @@ import {
 import styles from './styles';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import LinearGradient from 'react-native-linear-gradient';
 import colors from '../../app/config/colors';
@@ -22,7 +23,6 @@ const avatar = require('../../assets/image/avatar.jpg');
 const bmwImage = require('../../assets/cars/bmw-wlcom.png');
 
 const gradient = [colors['dark'], colors.dark_yellow];
-
 
 export default function HomeScreen() {
   return (
@@ -128,9 +128,12 @@ export default function HomeScreen() {
                   }}>
                   {car.name}
                 </Text>
-                <View style={{
-                  marginVertical: SPACING,
-                }}>
+                <View
+                  style={{
+                    marginVertical: SPACING,
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
                   <Text
                     style={{
                       color: colors.light,
@@ -138,6 +141,15 @@ export default function HomeScreen() {
                     }}>
                     $ {car.price}
                   </Text>
+                  <TouchableOpacity>
+                    <LinearGradient colors={gradient}>
+                      <Ionicons
+                        name="arrow-forward"
+                        size={SPACING * 2}
+                        color={colors.light}
+                      />
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </View>
               </LinearGradient>
             ))}
