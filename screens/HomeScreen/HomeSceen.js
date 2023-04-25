@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
-  Dimensions,
 } from 'react-native';
 import styles from './styles';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -31,7 +30,7 @@ export default function HomeScreen() {
         <View style={styles.containerGradient}>
           <LinearGradient
             style={styles.circleGradient}
-            colors={[colors.light, colors['dark-gray']]}>
+            colors={[colors.light, colors['darkgray']]}>
             <TouchableOpacity style={styles.entypoIcon}>
               <Entypo
                 name="dots-three-horizontal"
@@ -42,7 +41,7 @@ export default function HomeScreen() {
           </LinearGradient>
           <LinearGradient
             style={styles.circleGradient}
-            colors={[colors.light, colors['dark-gray']]}>
+            colors={[colors.light, colors['darkgray']]}>
             <TouchableOpacity style={styles.entypoIcon}>
               <Image source={avatar} style={styles.avatar} />
             </TouchableOpacity>

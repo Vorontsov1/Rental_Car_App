@@ -43,7 +43,7 @@ const CompanyScreen = () => {
           </Text>
           <Text
             style={{
-              color: colors['dark-gray'],
+              color: colors['darkgray'],
               marginTop: SPACING,
             }}>
             5 Series
