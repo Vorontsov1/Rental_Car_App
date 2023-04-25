@@ -6,8 +6,8 @@ import CompanyScreen from './screens/CompanyScreen/CompanyScreen';
 const App = () => {
   return (
     <View style={styles.container}>
-      {/* <HomeScreen /> */}
-      <CompanyScreen />
+      <HomeScreen />
+      {/* <CompanyScreen /> */}
       <StatusBar
         barStyle="light-content"
       />
