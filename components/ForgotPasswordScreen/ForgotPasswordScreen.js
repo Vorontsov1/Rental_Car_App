@@ -1,10 +1,14 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import styles from './styles';
 
 const ForgotPasswordScreen = () => {
   return (
-    <View>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Forgot Password Screen</Text>
+      <TouchableOpacity style={styles.loginBtn}>
+        <Text style={styles.loginText}>Forgot Password? </Text>
+      </TouchableOpacity>
     </View>
   );
 };

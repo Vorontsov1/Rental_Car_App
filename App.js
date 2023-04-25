@@ -12,8 +12,8 @@ const App = () => {
     <View style={styles.container}>
       {/* <HomeScreen /> */}
       {/* <CompanyScreen /> */}
-      <LoginScreen />
-      {/* <ForgotPasswordScreen /> */}
+      {/* <LoginScreen /> */}
+      <ForgotPasswordScreen />
       <StatusBar
         barStyle="light-content"
       />
