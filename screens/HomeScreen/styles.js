@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: SPACING * 2,
   },
   input: {
-    backgroundColor: colors['dark-gray'],
+    backgroundColor: colors['darkgray'],
     padding: SPACING * 1.5,
     borderRadius: SPACING * 2,
     color: colors.white,
