@@ -1,25 +1,24 @@
 import React from 'react';
-import {View, Text, StyleSheet, StatusBar} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import CompanyScreen from './screens/CompanyScreen/CompanyScreen';
 import LoginScreen from './components/LoginScreen/LoginScreen';
 import ForgotPasswordScreen from './components/ForgotPasswordScreen/ForgotPasswordScreen';
 import ResetPasswordScreen from './components/ResetPasswordScreen/ResetPasswordScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      {/* <HomeScreen /> */}
-      {/* <CompanyScreen /> */}
-      {/* <LoginScreen /> */}
-      {/* <ForgotPasswordScreen /> */}
-      <ResetPasswordScreen />
-      <StatusBar
-        barStyle="light-content"
-      />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+        <Stack.Screen name="ResetPassword" component={ResetPasswordScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
