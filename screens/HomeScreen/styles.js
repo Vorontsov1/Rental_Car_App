@@ -5,6 +5,11 @@ import colors from '../../app/config/colors';
 
 const {width} = Dimensions.get('window');
 const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 20,
+    flex: 1,
+    backgroundColor: '#FFCE2B',
+  },
   circleGradient: {
     height: SPACING * 4,
     width: SPACING * 4,
