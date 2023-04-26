@@ -27,12 +27,14 @@ export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{marginHorizontal: SPACING * 2,}}>
+        <View style={{marginHorizontal: SPACING * 2}}>
           <View style={styles.containerGradient}>
             <LinearGradient
               style={styles.circleGradient}
               colors={[colors.light, colors['darkgray']]}>
-              <TouchableOpacity style={styles.entypoIcon}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('Camera')}
+                style={styles.entypoIcon}>
                 <Entypo
                   name="dots-three-horizontal"
                   size={SPACING * 2.5}
