@@ -3,16 +3,13 @@ import {View, TextInput, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import colors from '../../app/config/colors';
 
-const LoginScreen = ({navigation}) => {
+const LoginScreen = () => {
   const [change, setChange] = useState({
     email: '',
     password: '',
   });
 
-    
-//     const onPressForgotPassword = () => { 
-// navigation.navigate('ForgotPasswordScreen');
-//     };
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}> Login Screen</Text>

@@ -4,6 +4,7 @@ import HomeScreen from './screens/HomeScreen';
 import CompanyScreen from './screens/CompanyScreen/CompanyScreen';
 import LoginScreen from './components/LoginScreen/LoginScreen';
 import ForgotPasswordScreen from './components/ForgotPasswordScreen/ForgotPasswordScreen';
+import ResetPasswordScreen from './components/ResetPasswordScreen/ResetPasswordScreen';
 
 
 
@@ -13,7 +14,8 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <CompanyScreen /> */}
       {/* <LoginScreen /> */}
-      <ForgotPasswordScreen />
+      {/* <ForgotPasswordScreen /> */}
+      <ResetPasswordScreen />
       <StatusBar
         barStyle="light-content"
       />
