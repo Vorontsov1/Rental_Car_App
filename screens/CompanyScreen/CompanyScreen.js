@@ -15,7 +15,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const logo = require('../../assets/logo/tesla.png');
 
-const CompanyScreen = () => {
+const CompanyScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -87,6 +87,7 @@ const CompanyScreen = () => {
                 Starting price from ${item.starting_price}
               </Text>
               <TouchableOpacity
+                onPress={() => navigation.navigate('ForgotPassword')}
                 style={{
                   overflow: 'hidden',
                   borderRadius: SPACING / 2,

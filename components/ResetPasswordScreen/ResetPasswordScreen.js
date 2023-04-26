@@ -4,7 +4,7 @@ import styles from './styles';
 
 
 
-const ResetPasswordScreen = () => {
+const ResetPasswordScreen = ({navigation}) => {
  return (
    <View
      style={{
@@ -14,7 +14,9 @@ const ResetPasswordScreen = () => {
        backgroundColor: '#FFCE2B',
      }}>
      <Text>Reset Password Screen</Text>
-     <TouchableOpacity style={styles.loginBtn}>
+     <TouchableOpacity
+       onPress={() => navigation.navigate('HomeScreen')}
+       style={styles.loginBtn}>
        <Text style={styles.loginText}>Reset Password</Text>
      </TouchableOpacity>
    </View>

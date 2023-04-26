@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const ForgotPasswordScreen = () => {
+const ForgotPasswordScreen = ({ navigation }) => {
   return (
     <View
       style={{
@@ -12,7 +12,9 @@ const ForgotPasswordScreen = () => {
         backgroundColor: '#FFCE2B',
       }}>
       <Text>Forgot Password Screen</Text>
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('ResetPassword')}
+        style={styles.loginBtn}>
         <Text style={styles.loginText}>Forgot Password? </Text>
       </TouchableOpacity>
     </View>

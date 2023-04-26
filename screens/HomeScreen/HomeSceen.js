@@ -23,7 +23,7 @@ const bmwImage = require('../../assets/cars/bmw-wlcom.png');
 
 const gradient = [colors['dark'], colors.dark_yellow];
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -141,6 +141,7 @@ export default function HomeScreen() {
                     $ {car.price}
                   </Text>
                   <TouchableOpacity
+                    onPress={() => navigation.navigate('CompanyScreen')}
                     style={{
                       borderRadius: SPACING / 2,
                       overflow: 'hidden',
