@@ -88,7 +88,7 @@ const CompanyScreen = ({navigation}) => {
                   Starting price from ${item.starting_price}
                 </Text>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate('ForgotPassword')}
+                  onPress={() => navigation.navigate('LoginScreen')}
                   style={{
                     overflow: 'hidden',
                     borderRadius: SPACING / 2,

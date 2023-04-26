@@ -7,7 +7,13 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#FFCE2B',
   },
+  loginContainer: {
+    width: '90%', 
+    alignItems: 'center',
+    justifyContent: 'center',
+   },
   title: {
     fontWeight: '600',
     fontSize: 40,
@@ -43,12 +49,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     borderRadius: SPACING * 2,
     marginTop: SPACING * 2,
-      marginBottom: SPACING * 2,
+    marginBottom: SPACING * 2,
   },
-    loginText: {
-        color: colors.white,
-        fontSize: SPACING * 2,
-        fontWeight: '700',
-        
+  loginText: {
+    color: colors.white,
+    fontSize: SPACING * 2,
+    fontWeight: '700',
   },
 });

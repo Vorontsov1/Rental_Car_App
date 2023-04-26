@@ -18,5 +18,20 @@ const styles = StyleSheet.create({
     fontSize: SPACING * 2,
     fontWeight: 'bold',
   },
+  customBtn: {
+    width: '80%',
+    backgroundColor: 'blue',
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: SPACING * 2,
+    marginTop: SPACING * 2,
+    marginBottom: SPACING * 2,
+  },
+  customBtnText: {
+    color: colors.white,
+    fontSize: SPACING * 2,
+    fontWeight: 'bold',
+  },
 });
 export default styles;
